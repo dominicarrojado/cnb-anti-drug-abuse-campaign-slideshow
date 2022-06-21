@@ -8,14 +8,14 @@ type Props = {
 export default function Layout({ children }: Props) {
   return (
     <div
-      className="flex flex-col min-h-full bg-red-550 bg-top bg-repeat-y bg-cover"
+      className="flex flex-col h-full bg-red-550 bg-top bg-repeat-y bg-cover"
       style={{
         backgroundImage: `url(${getAssetUrl(
           'images/bg-vibrant-colors-striped.png'
         )})`,
       }}
     >
-      <main>{children}</main>
+      <main className="w-full h-full">{children}</main>
     </div>
   );
 }
