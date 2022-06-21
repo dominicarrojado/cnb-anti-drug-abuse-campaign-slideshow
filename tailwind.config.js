@@ -8,7 +8,11 @@ module.exports = {
     fontFamily: {
       sans: ['DIN', 'Helvetica', 'Arial', 'sans-serif'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        'red-550': 'rgba(233, 27, 61, 1)',
+      },
+    },
   },
   plugins: [],
 };

@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import SeoTags from '../components/seoTags';
 import FontFaces from '../components/fontFaces';
 import TagManager from '../components/tagManager';
+import Layout from '../components/layout';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +11,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <SeoTags />
       <FontFaces />
       <TagManager />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }
