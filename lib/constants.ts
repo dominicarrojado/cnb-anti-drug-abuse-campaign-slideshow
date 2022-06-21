@@ -13,4 +13,6 @@ export const META_IMAGE_HEIGHT = 648;
 export const META_IMAGE_ALT = 'Secure a #DrugFreeSG | Make your pledge today!';
 export const META_IMAGE_TYPE = 'image/png';
 
+export const APP_URL = `${MAIN_ORIGIN}/cnb-anti-drug-abuse-campaign-app/`;
+
 export const FONTS = ['DIN-Regular', 'DIN-Italic'];

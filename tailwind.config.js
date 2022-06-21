@@ -12,6 +12,19 @@ module.exports = {
       colors: {
         'red-550': 'rgba(233, 27, 61, 1)',
       },
+      keyframes: {
+        expand: {
+          '0%, 80%, 100%': {
+            transform: 'scale(0)',
+          },
+          '40%': {
+            transform: 'scale(1)',
+          },
+        },
+      },
+      animation: {
+        expand: 'expand 1.4s infinite ease-in-out both',
+      },
     },
   },
   plugins: [],
