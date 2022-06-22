@@ -9,6 +9,9 @@ module.exports = {
       sans: ['DIN', 'Helvetica', 'Arial', 'sans-serif'],
     },
     extend: {
+      screens: {
+        lg: { raw: '(min-width: 1280px) and (min-height: 720px)' },
+      },
       colors: {
         'red-550': 'rgba(233, 27, 61, 1)',
       },
