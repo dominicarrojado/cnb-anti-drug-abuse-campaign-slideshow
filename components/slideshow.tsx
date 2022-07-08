@@ -25,8 +25,14 @@ export default function Slideshow() {
           'lg:flex lg:portrait:hidden'
         )}
       >
-        {hasEntries && <EntryList entries={entries} />}
-        {fetchState === FetchState.LOADING && <LoaderBubbles />}
+        {hasEntries && (
+          <EntryList
+            fetchState={fetchState}
+            entries={entries}
+            getMoreEntries={getMoreEntries}
+          />
+        )}
+        {!hasEntries && <LoaderBubbles />}
         {fetchState === FetchState.ERROR && (
           <Error retryOnClick={getMoreEntries} />
         )}

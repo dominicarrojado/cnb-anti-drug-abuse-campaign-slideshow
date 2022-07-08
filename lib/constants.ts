@@ -37,3 +37,5 @@ export const STICKERS = [
 export const STICKERS_LENGTH = STICKERS.length;
 
 export const SLIDESHOW_INTERVAL = 40;
+export const SLIDESHOW_MAX_ENTRIES = ENTRIES_PER_PAGE * 10;
+export const SLIDESHOW_LOAD_MORE_THRESHOLD = 0.8;
