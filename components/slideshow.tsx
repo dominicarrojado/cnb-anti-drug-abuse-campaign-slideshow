@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import cn from 'classnames';
-import { getAssetUrl } from '../lib/assets';
+import { useGetEntries } from '../lib/custom-hooks';
+import EntryList from './entryList';
 import LoaderBubbles from './loaderBubbles';
-import { APP_URL } from '../lib/constants';
+import Error from './error';
+import Logo from './logo';
+import Banner from './banner';
+import { FetchState } from '../lib/types';
 
 export default function Slideshow() {
+  const [fetchState, entries, hasEntries, getMoreEntries] = useGetEntries();
+
+  useEffect(() => {
+    getMoreEntries();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <div
         className={cn(
-          'hidden flex-1 h-full justify-center items-center border-[3px] border-white bg-black bg-opacity-80',
+          'hidden flex-1 h-full min-h-full justify-center items-center border-[3px] border-white bg-black bg-opacity-80',
           'lg:flex lg:portrait:hidden'
         )}
       >
-        <LoaderBubbles />
+        {hasEntries && <EntryList entries={entries} />}
+        {fetchState === FetchState.LOADING && <LoaderBubbles />}
+        {fetchState === FetchState.ERROR && (
+          <Error retryOnClick={getMoreEntries} />
+        )}
       </div>
       <div
         className={cn(
@@ -22,28 +38,10 @@ export default function Slideshow() {
         )}
       >
         <div className="h-[36%]">
-          <h1 className="w-full h-full pb-[10px]">
-            <img
-              src={getAssetUrl('images/logo-secure-a-drug-free-singapore.png')}
-              alt="Secure a #DrugFreeSG"
-              width="676"
-              height="343"
-              className="w-full h-full aspect-[676/343] border-[3px] border-white"
-            />
-          </h1>
+          <Logo />
         </div>
         <div className="h-[64%]">
-          <a href={APP_URL}>
-            <img
-              src={getAssetUrl(
-                'images/banner-cnb-anti-drug-abuse-campaign.png'
-              )}
-              alt="Secure a #DrugFreeSG | Organised by: National Council Against Drug Abuse, Central Narcotics Bureau | In collaboration with: Singapore Polytechnic | Win up to $100 worth of vouchers in a bi-monthly draw"
-              width="677"
-              height="599"
-              className="w-full h-full aspect-[677/599] border-[3px] border-white"
-            />
-          </a>
+          <Banner />
         </div>
       </div>
     </>

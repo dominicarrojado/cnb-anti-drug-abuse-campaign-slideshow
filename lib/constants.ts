@@ -1,3 +1,5 @@
+import { getAssetUrl } from './assets';
+
 export const SITE_NAME = 'Dominic Arrojado';
 export const PROJECT_TITLE = 'CNB Anti-Drug Abuse Campaign Slideshow Singapore';
 export const MAIN_AUTHOR = 'Dominic Arrojado';
@@ -15,4 +17,23 @@ export const META_IMAGE_TYPE = 'image/png';
 
 export const APP_URL = `${MAIN_ORIGIN}/cnb-anti-drug-abuse-campaign-app/`;
 
+export const ENTRIES_PER_PAGE = 9;
+export const ENTRY_IMAGE_SIZE = 345;
+
+export const IMAGE_GENERATED_TYPE = 'image/png';
+
 export const FONTS = ['DIN-Regular', 'DIN-Italic'];
+
+export const STICKERS = [
+  getAssetUrl('images/sticker-1-secure-a-drug-free-sg.png'),
+  getAssetUrl('images/sticker-2-secure-a-drug-free-sg.png'),
+  getAssetUrl('images/sticker-3-secure-a-drug-free-sg.png'),
+  getAssetUrl('images/sticker-4-secure-a-drug-free-sg.png'),
+  getAssetUrl('images/sticker-5-secure-a-drug-free-sg.png'),
+  getAssetUrl('images/sticker-6-secure-a-drug-free-sg.png'),
+  getAssetUrl('images/sticker-7-ribbon-secure-a-drug-free-sg.png'),
+  getAssetUrl('images/sticker-8-certified-drug-free.png'),
+];
+export const STICKERS_LENGTH = STICKERS.length;
+
+export const SLIDESHOW_INTERVAL = 40;
