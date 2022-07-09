@@ -18,7 +18,7 @@ export const META_IMAGE_TYPE = 'image/png';
 
 export const APP_URL = `${MAIN_ORIGIN}/cnb-anti-drug-abuse-campaign-app/`;
 
-export const ENTRIES_PER_PAGE = 9;
+export const ENTRIES_PER_PAGE = 18;
 export const ENTRY_IMAGE_SIZE = 345;
 export const ENTRY_BG_COLORS = Object.values(Color);
 export const ENTRY_BG_COLORS_LENGTH = ENTRY_BG_COLORS.length;
