@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { getFakerJs } from './imports';
-import { getRandomStickerImageUrl } from './stickers';
+import {
+  getRandomAnimationDelay,
+  getRandomBgColor,
+  getRandomBgDirection,
+  getRandomStickerImageUrl,
+} from './entries';
 import { createImageWithSticker } from './canvas';
 import { Entry, FetchState } from './types';
 import { ENTRIES_PER_PAGE, ENTRY_IMAGE_SIZE } from './constants';
@@ -37,6 +42,9 @@ export function useGetEntries() {
               ),
               name: faker.name.findName(),
               message: faker.lorem.sentence(),
+              bgColor: getRandomBgColor(),
+              bgDirection: getRandomBgDirection(),
+              animationDelay: getRandomAnimationDelay(),
             };
           })()
         );

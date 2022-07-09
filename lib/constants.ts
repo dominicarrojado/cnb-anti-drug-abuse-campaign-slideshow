@@ -1,4 +1,5 @@
 import { getAssetUrl } from './assets';
+import { Color, Direction } from './types';
 
 export const SITE_NAME = 'Dominic Arrojado';
 export const PROJECT_TITLE = 'CNB Anti-Drug Abuse Campaign Slideshow Singapore';
@@ -19,6 +20,11 @@ export const APP_URL = `${MAIN_ORIGIN}/cnb-anti-drug-abuse-campaign-app/`;
 
 export const ENTRIES_PER_PAGE = 9;
 export const ENTRY_IMAGE_SIZE = 345;
+export const ENTRY_BG_COLORS = Object.values(Color);
+export const ENTRY_BG_COLORS_LENGTH = ENTRY_BG_COLORS.length;
+export const ENTRY_BG_DIRECTIONS = Object.values(Direction);
+export const ENTRY_BG_DIRECTIONS_LENGTH = ENTRY_BG_DIRECTIONS.length;
+export const ENTRY_ANIM_DELAY_MAX_SECONDS = 16;
 
 export const IMAGE_GENERATED_TYPE = 'image/png';
 
