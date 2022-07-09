@@ -2,7 +2,7 @@
 
 ![CI/CD](https://github.com/dominicarrojado/cnb-anti-drug-abuse-campaign-slideshow/workflows/CI/CD/badge.svg)
 
-A slideshow of pledges submitted to the anti-drug campaign photo contest app built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Tailwind CSS](https://tailwindcss.com/).
+A slideshow of pledges submitted to the [anti-drug campaign photo contest app](https://dominicarrojado.com/cnb-anti-drug-abuse-campaign-app/) built with [Next.js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/) and [Tailwind CSS](https://tailwindcss.com/).
 
 ## Quick Start
 
